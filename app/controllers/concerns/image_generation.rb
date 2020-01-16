@@ -7,7 +7,7 @@ module ImageGeneration
   end
 
   def generate_image(html)
-    rendered_summary_image = Grover.new(html)
-    rendered_summary_image.to_jpeg
+    rendered_image = Grover.new(html)
+    rendered_image.to_jpeg
   end
 end

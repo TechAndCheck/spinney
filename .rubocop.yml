@@ -15,7 +15,7 @@ AllCops:
     - 'redis-stable/**/*'
     - 'bin/**/*'
     - 'vendor/**/*'
-  TargetRubyVersion: 2.5
+  TargetRubyVersion: 2.7
 
 # Join tables don't really need timestamps
 Rails/CreateTableWithTimestamps:

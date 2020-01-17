@@ -189,6 +189,7 @@ DEPENDENCIES
   pg
   puma (~> 4.1)
   rails (~> 6.0.2, >= 6.0.2.1)
+  rainbow
   rubocop
   rubocop-performance
   rubocop-rails

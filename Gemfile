@@ -48,3 +48,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Grover lets us render views to images (or PDFs) easily
 gem "grover"
+
+# Rainbow to make colors on the command line all pretty
+gem "rainbow"

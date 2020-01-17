@@ -1,24 +1,34 @@
-# README
+# Spinney
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Spinney is a [Puppeteer](https://github.com/puppeteer/puppeteer/)-as-a-service app
+designed to be a headless Rails app that proxies the appropriate request to Puppeteer
+via the [Grover](https://github.com/Studiosity/grover) gem, and returns the rendered
+result. It is designed to run on the Heroku and AWS free tiers (probably).
 
-Things you may want to cover:
+Its only initial requirement is to take HTML input and spit out a JPEG, but we'd like
+to support the entire Grover configuration surface as early as possible.
 
-* Ruby version
+# Setup
 
-* System dependencies
+TBD
 
-* Configuration
+# Request Format
+TBD
+```
+{
+	"api_key": "xxxxxxxxxxxxxxxxxx",
+	"html": "<html><body>Hello world</body></html>"
+}
+```
 
-* Database creation
+# Response Format
+TBD
+```
+{
+    "image_data": "/9j/4AAQSkZJRgABAQAAAQABAAD/4gIoSUNDX1BST0ZJTEUAAQEAAAIYAAAA\nAAIQAABtbnRyUkdCIFhZWiAAAAAAAAAAAAAAAABhY3NwAAAAAAAAAAAAAAAA\nAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAA\nAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAA\nAHRyWFlaAAABZAAAABRnWFlaAAABeAAAABRiWFlaAAABjAAAABRyVFJDAAAB\noAAAAChnVFJDAAABoAAAAChiVFJDAAABoAAAACh3dHB0AAAByAAAABRjcHJ0\nAAAB3AAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAFgAAAAcAHMAUgBHAE...."
+}
+```
 
-* Database initialization
+# API Key management
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+TBD

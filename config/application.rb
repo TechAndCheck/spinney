@@ -35,9 +35,9 @@ module Spinney
     config.api_only = true
 
     # Configure Sentry bug catching if we have an API key available for use.
-    unless ENV["SENTRY_API_KEY"].blank?
+    unless ENV["SENTRY_DSN"].blank?
       Raven.configure do |config|
-        config.dsn = ENV["SENTRY_API_KEY"]
+        config.dsn = ENV["SENTRY_DSN"]
       end
     end
   end

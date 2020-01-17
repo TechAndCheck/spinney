@@ -28,7 +28,7 @@ private
 
   # Raven is Sentry.io's bug catcher client. We just return if we don't have it enabled
   def set_raven_context
-    return if ENV["SENTRY_API_KEY"]
+    return if ENV["SENTRY_DSN"]
 
     # So this is sending the api_key directly to the logs. Probably... not the best idea, but I
     # also don't want to do a db call and use the same logic as in `authorize_keys` here.

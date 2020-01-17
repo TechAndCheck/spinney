@@ -1,0 +1,55 @@
+{
+  "name": "spinney",
+  "description": "A Puppeteer-as-a-service app for turning HTML into images",
+  "addons": [
+    "heroku-postgresql"
+  ],
+  "env": {
+    "HEROKU_APP_NAME": {
+      "description": "Heroku auto-injects this app's hostname into the env when using review apps. We use it to determine if we're in a review app. https://devcenter.heroku.com/articles/github-integration-review-apps#injected-environment-variables",
+      "required": false
+    },
+    "LANG": {
+      "description": "Document language and encoding supplied with HTTP responses",
+      "value": "en_US.UTF-8",
+      "required": true
+    },
+    "RACK_ENV": {
+      "description": "Rack environment; defaults to same as RAILS_ENV",
+      "value": "production",
+      "required": true
+    },
+    "RAILS_LOG_TO_STDOUT": {
+      "description": "Configures Rails to log to stdout, which we pick up with log monitoring add-ons",
+      "value": "true",
+      "required": true
+    },
+    "RAILS_SERVE_STATIC_FILES": {
+      "description": "Configures Rails to generate and serve static files directly without using an external asset server",
+      "value": "true",
+      "required": true
+    },
+    "SECRET_KEY_BASE": {
+      "description": "Secret salt used for generating random things such as UUIDs; required, but generated and rotated by hand to control session kills",
+      "required": true
+    },
+    "GROVER_NO_SANDBOX": {
+      "description": "Disables Chrome sandboxing for Grover; requires we trust content passed to Grover",
+      "value": "true",
+      "required": true
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/ruby"
+    },
+    {
+      "url": "jontewks/puppeteer"
+    }
+  ]
+}

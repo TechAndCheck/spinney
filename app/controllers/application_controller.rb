@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::API
+  before_action :set_raven_context
   before_action :authorize_api_key
 
   # Check if there's a proper API key before every request
@@ -21,5 +22,17 @@ class ApplicationController < ActionController::API
 
     # Update the key with the current time so we know it's being used
     key.update last_used: DateTime.now
+  end
+
+private
+
+  # Raven is Sentry.io's bug catcher client. We just return if we don't have it enabled
+  def set_raven_context
+    return if ENV["SENTRY_API_KEY"]
+
+    # So this is sending the api_key directly to the logs. Probably... not the best idea, but I
+    # also don't want to do a db call and use the same logic as in `authorize_keys` here.
+    Raven.user_context(id: params[:api_key]) unless params[:api_key].blank? # or anything else in session
+    Raven.extra_context(params: params.to_unsafe_h, url: request.url)
   end
 end

@@ -33,5 +33,12 @@ module Spinney
     # Middleware like session, flash, cookies can be added back manually.
     # Skip views, helpers and assets when generating a new resource.
     config.api_only = true
+
+    # Configure Sentry bug catching if we have an API key available for use.
+    unless ENV["SENTRY_API_KEY"].blank?
+      Raven.configure do |config|
+        config.dsn = ENV["SENTRY_API_KEY"]
+      end
+    end
   end
 end

@@ -51,3 +51,6 @@ gem "grover"
 
 # Rainbow to make colors on the command line all pretty
 gem "rainbow"
+
+# Sentry catches errors
+gem "sentry-raven"

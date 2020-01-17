@@ -37,6 +37,10 @@
       "description": "Disables Chrome sandboxing for Grover; requires we trust content passed to Grover",
       "value": "true",
       "required": true
+    },
+    "SENTRY_API_KEY": {
+      "description": "Enables Sentry.io monitoring and provides the key for client",
+      "required": false
     }
   },
   "formation": {

@@ -19,7 +19,7 @@ class ApplicationController < ActionController::API
       return
     end
 
-    # Update the key wiht the current time so we know it's being used
+    # Update the key with the current time so we know it's being used
     key.update last_used: DateTime.now
   end
 end

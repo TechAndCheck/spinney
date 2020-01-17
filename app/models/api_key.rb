@@ -1,5 +1,5 @@
 # An API key for access to the system
-# Right now the keys are stored in plaintext in the DB. We could has them, but them we could
+# Right now the keys are stored in plaintext in the DB. We could hash them, but then we could
 # also only show the users the key once, which for our limited purposes will cause a lot of
 # headaches.
 class ApiKey < ApplicationRecord

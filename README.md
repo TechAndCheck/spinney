@@ -33,6 +33,8 @@ TBD
 
 API keys are managed through Rake tasks. This means that you must have access to the command line of the machine running Spinney. Since this is a backend-facing product that's the easiest to handle at the moment.
 
+Note: If you're using [Z shell/zsh](https://en.wikipedia.org/wiki/Z_shell), which is the default new command line on MacOS, you may need to wrap commands in `'` (single apostrophe) such as `rails 'keys:new[Dubric Ergyng]'`.
+
 ## Rake Tasks
 
 ### List

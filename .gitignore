@@ -34,3 +34,6 @@ dump.rdb
 yarn-debug.log*
 .yarn-integrity
 yarn-error.log
+
+# Ignore application configuration
+/config/application.yml

@@ -33,5 +33,13 @@ module Spinney
     # Middleware like session, flash, cookies can be added back manually.
     # Skip views, helpers and assets when generating a new resource.
     config.api_only = true
+
+    # Don't log the api_key being sent in, since it's private
+    config.filter_parameters << :api_key
+
+    # Settings for Sentry.io
+    Raven.configure do |config|
+      config.dsn = Figaro.env.SENTRY_DSN
+    end
   end
 end

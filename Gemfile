@@ -51,3 +51,10 @@ gem "grover"
 
 # Rainbow to make colors on the command line all pretty
 gem "rainbow"
+
+# Figaro helps us manage application credentials in a better way than Rails does by default
+gem "figaro"
+
+# Sentry is an error tracker for Ruby and other things
+# https://sentry.io for more info
+gem "sentry-raven"

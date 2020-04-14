@@ -13,7 +13,7 @@ to support the entire Grover configuration surface as early as possible.
 TBD
 
 # Request Format
-TBD
+POST /convert
 ```
 {
 	"api_key": "xxxxxxxxxxxxxxxxxx",
@@ -31,4 +31,55 @@ TBD
 
 # API Key management
 
+API keys are managed through Rake tasks. This means that you must have access to the command line of the machine running Spinney. Since this is a backend-facing product that's the easiest to handle at the moment.
+
+Note: If you're using [Z shell/zsh](https://en.wikipedia.org/wiki/Z_shell), which is the default new command line on MacOS, you may need to wrap commands in `'` (single apostrophe) such as `rails 'keys:new[Dubric Ergyng]'`.
+
+## Rake Tasks
+
+### List
+
+List all api keys in the system
+
+###### Sample Command
+`rails keys:list`
+
+###### Sample Response
+```
+id: 1 | name: Kevin Glendalough | last_used: 2020-01-17T02:31:08 | key: 5d6daacd76019e39eb49b5a6b4ebaf7e
+id: 2 | name: Ciarán Saigir     | last_used: 2020-01-17T02:31:08 | key: 5d6daacd76019e39eb49b5a6b4ebaf7e
+```
+
+### Create
+
+Create a new api key
+
+###### Sample Command
+`rails keys:new[Elfodd Gwynedd]`
+
+###### Sample Response
+```
+New key generated ⚙️
+--------------------------------------------
+id: 2 | name: Elfodd Gwynedd | last_used: Never | key: e984ddb6e40706014acfe206bdc59c21
+```
+
+### Delete
+
+Delete an api key
+
+###### Sample Command
+`rails keys:delete[12]`
+
+###### Sample Response
+```
+Successfully deleted key #2
+```
+
+# Development
+
 TBD
+
+Note: All sample names in the documentation should be those of Celtic bishops or saints prior to romanization of the church.
+In cases where no surname is known, add the city of birth or known city of origin.
+You can find some here: https://en.wikipedia.org/wiki/Celtic_Christianity

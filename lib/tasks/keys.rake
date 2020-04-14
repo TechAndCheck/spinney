@@ -17,6 +17,7 @@ namespace :keys do
   task :new, [:name] => :environment do |t, args|
     if args.name.blank?
       puts "Please supply a name for this key so you know what it's for in six months"
+      puts "Sample: rails keys:new[Elfodd Gwynedd]"
       exit
     end
 
@@ -30,6 +31,7 @@ namespace :keys do
   task :delete, [:id] => :environment do |t, args|
     if args.id.blank?
       puts "You have to give an ID to actually delete"
+      puts "Sample: rails keys:delete[12]"
       exit
     end
 

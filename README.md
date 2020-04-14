@@ -13,7 +13,7 @@ to support the entire Grover configuration surface as early as possible.
 TBD
 
 # Request Format
-TBD
+POST /convert
 ```
 {
 	"api_key": "xxxxxxxxxxxxxxxxxx",
@@ -78,6 +78,6 @@ Successfully deleted key #2
 
 TBD
 
-Note: All sample names in the documentation should be those of Celtic Bishops or saints prior to romanization of the church.
+Note: All sample names in the documentation should be those of Celtic bishops or saints prior to romanization of the church.
 In cases where no surname is known, add the city of birth or known city of origin.
 You can find some here: https://en.wikipedia.org/wiki/Celtic_Christianity
